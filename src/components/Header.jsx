@@ -6,9 +6,9 @@ import { TiThMenu } from "react-icons/ti";
 
 const headerData = [
   { name: "About", id: "1" },
-  { name: "Education", id: "2" },
-  { name: "Project", id: "3" },
-  { name: "Contact", id: "4" },
+  // { name: "Education", id: "2" },
+  { name: "View Projects", id: "3" },
+  // { name: "Contact", id: "4" },
 ];
 
 const header = (props) => {

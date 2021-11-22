@@ -1,9 +1,60 @@
 import React from "react";
 import { ProtfolioAboutWrap } from "../styles/aboutStyles";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { MdPhoneAndroid } from "react-icons/md";
+
 import ganapathy from "./../images/gana.jpeg";
+import {
+  FaFacebookSquare,
+  FaInstagram,
+  FaLinkedin,
+  FaGithubSquare,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const About = () => {
+  const socialsData = [
+    {
+      id: "facebook",
+      icon: FaFacebookSquare,
+      link: "https://www.facebook.com/den.coorg.9/",
+    },
+    {
+      id: "instagram",
+      icon: FaInstagram,
+      link: "https://www.instagram.com/den_ganapathy/",
+    },
+    {
+      id: "linkedin",
+      icon: FaLinkedin,
+      link: "https://www.linkedin.com/in/ganapathy-s-k-66ba2979",
+    },
+    {
+      id: "github",
+      icon: FaGithubSquare,
+      link: "https://github.com/den-ganapathy",
+    },
+  ];
+
+  const contactsData = [
+    {
+      id: "Email",
+      icon: FaEnvelope,
+      link: "",
+      body: "ganapathysk1@gmail.com",
+    },
+    {
+      id: "Phone",
+      icon: MdPhoneAndroid,
+      link: "",
+      body: "+91-7760936876",
+    },
+  ];
+
+  const gotoLink = (url) => {
+    window.open(url);
+  };
+
   return (
     <ProtfolioAboutWrap>
       <div className="about">
@@ -12,29 +63,40 @@ const About = () => {
           <div className="about-header-name">Ganapathy S K</div>
           <div className="about-header-designation">Software Engineer</div>
         </div>
-        <div className="about-contact1">
-          <p>
-            <span>Age : </span> &nbsp; &ensp; 24
-          </p>
-          <p>
-            <span>Address : </span> &nbsp; &ensp; Bangalore, Karnataka
-          </p>
-          <p>
-            <span>Email: </span> &nbsp; &ensp;densk619@gmail.com
-          </p>
-          <p>
-            <span>Contact : </span> &nbsp; &ensp; +91 7760936876
-          </p>
+        <div className="about-contact">
           <div className="description">
             <span>
               <FaQuoteLeft />{" "}
             </span>
-            &ensp;Passionate Developer, Experienced in end-to-end development
-            and deployment of web applications. Experienced in tools and
-            technologies such as Node.js, React.js, MYSQL, MongoDb. &ensp;
+            &ensp;Enthusiastic developer with an aim to deliver a fulfilling
+            product to end- user. Passionate about implementing scalable
+            solutions so as to improve performance &ensp;
             <span>
               <FaQuoteRight />
             </span>
+          </div>
+          <div className="contact-body">
+            {contactsData &&
+              contactsData.map((item) => {
+                return (
+                  <div className="contact-body-icon">
+                    <p>
+                      <item.icon />
+                    </p>
+                    {item.body}
+                  </div>
+                );
+              })}
+          </div>
+          <div className="contact-socials">
+            {socialsData &&
+              socialsData.map((item) => {
+                return (
+                  <p onClick={() => gotoLink(item.link)} className="icon">
+                    <item.icon />
+                  </p>
+                );
+              })}
           </div>
         </div>
       </div>

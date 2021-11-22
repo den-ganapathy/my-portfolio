@@ -8,9 +8,9 @@ import { NavbarWrap } from "../styles/navbarStyles";
 export default function Navbar(props) {
   const dataArr = [
     { name: "About", id: "1" },
-    { name: "Education", id: "2" },
+    // { name: "Education", id: "2" },
     { name: "Project", id: "3" },
-    { name: "Contact", id: "4" },
+    // { name: "Contact", id: "4" },
   ];
   useEffect(() => {
     Aos.init({

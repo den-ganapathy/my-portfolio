@@ -17,12 +17,12 @@ const PortfolioDen = () => {
       <Header toggleNavbar={toggleNavbar} />
       <div id="1"></div>
       <About />
-      <div id="2"></div>
-      <Education />
+      {/* <div id="2"></div>
+      <Education /> */}
       <div id="3"></div>
       <Project />
-      <div id="4"></div>
-      <Contact />
+      {/* <div id="4"></div>
+      <Contact /> */}
       {isNavbar ? <Navbar toggleNavbar={toggleNavbar} /> : ""}
     </>
   );

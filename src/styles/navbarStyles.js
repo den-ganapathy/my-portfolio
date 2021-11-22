@@ -24,8 +24,9 @@ export const NavbarWrap = styled.div`
   }
 
   .navbarContainer {
-    border-left: 2px solid black;
-    background-color: #fff;
+    border-left: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
     width: 20%;
     height: 100vh;
     padding: 0 1.5rem;
@@ -44,7 +45,7 @@ export const NavbarWrap = styled.div`
 
     &__contents {
       width: 100%;
-      color: #000;
+      color: white;
 
       &--para {
         font-family: "Kanit", sans-serif;

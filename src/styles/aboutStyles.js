@@ -39,7 +39,7 @@ export const ProtfolioAboutWrap = styled.div`
         margin: 1rem auto;
         width: 30rem;
         height: auto;
-        border-radius: 10%;
+        border-radius: 50%;
         text-align: center;
         ${media.tab} {
         }
@@ -82,12 +82,11 @@ export const ProtfolioAboutWrap = styled.div`
       ${media.mobile} {
       }
     }
-    &-contact1 {
+    &-contact {
       margin-right: 10%;
       flex: 0 0 50%;
       p {
         font-size: 1.5rem;
-        margin-left: 20%;
         color: #fff;
         span {
           font-size: 1.8rem;
@@ -129,6 +128,86 @@ export const ProtfolioAboutWrap = styled.div`
           font-size: 1rem;
         }
       }
+      .contact-body {
+        margin: 2rem auto;
+        /* margin-bottom: 6rem; */
+        /* margin-top: 6rem; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &-icon {
+          color: white;
+          flex: 0 0 28%;
+          display: flex;
+          text-align: center;
+          font-size: 1.5rem;
+          align-items: center;
+          flex-direction: column;
+          padding-bottom: 2rem;
+          p {
+            font-size: 3rem;
+          }
+        }
+        ${media.tab} {
+          width: 100vw;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          flex-direction: column;
+          padding-bottom: 0rem;
+          &-icon {
+            p {
+              font-size: 2.5rem;
+            }
+          }
+        }
+        ${media.mobile} {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          &-icon {
+            padding-bottom: 1rem;
+            font-size: 1rem;
+            p {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+
+      .contact-socials {
+        margin: 0 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2rem;
+        p {
+          display: flex;
+          text-decoration: none;
+          color: black;
+          font-size: 2rem;
+          color: white;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          ${media.tab} {
+            font-size: 1.8rem;
+            padding: 0rem;
+          }
+          ${media.mobile} {
+            font-size: 1.5rem;
+            padding: 0rem;
+          }
+        }
+        .icon {
+          padding: 1rem;
+          :hover {
+            background: white;
+            color: black;
+          }
+        }
+      }
+
       ${media.tab} {
         display: flex;
         flex-direction: column;

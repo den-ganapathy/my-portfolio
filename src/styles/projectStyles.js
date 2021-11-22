@@ -74,12 +74,16 @@ export const ProtfolioProjectWrap = styled.div`
         border: 5px solid white;
 
         ${media.tab} {
-          width: 16rem;
+          width: 100%;
           height: 12rem;
+          object-fit: cover;
+          border: 0px solid white;
         }
         ${media.mobile} {
-          width: 15.5rem;
+          width: 100%;
           height: 12rem;
+          object-fit: cover;
+          border: 0px solid white;
         }
       }
       p {
@@ -87,24 +91,41 @@ export const ProtfolioProjectWrap = styled.div`
         justify-content: space-between;
         align-items: center;
         margin: 1rem 1rem;
+        flex-direction: column;
         span {
           font-size: 1.5rem;
           letter-spacing: 0.1rem;
           font-family: "Carter One", cursive;
           font-weight: bold;
         }
-        button {
-          cursor: pointer;
-          color: white;
-          background-color: #2b8fd4;
-          padding: 0.5rem 1rem;
-          border: none;
-          transition: transform 1s ease-in-out;
-          font-size: 1rem;
-          letter-spacing: 0.1rem;
-          border-radius: 0.5rem;
-          :hover {
-            transform: scale(1.1);
+        .buttons {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 1rem;
+          .button1 {
+            cursor: pointer;
+            color: white;
+            background-color: #2b8fd4;
+            padding: 0.5rem 1rem;
+            border: none;
+            transition: transform 0.5s ease-in-out;
+            font-size: 0.8rem;
+            letter-spacing: 0.1rem;
+            border-radius: 0.5rem;
+            :hover {
+              transform: scale(1.05);
+            }
+          }
+          .button2 {
+            cursor: pointer;
+            color: #123456;
+            background-color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
+            border-radius: 0.5rem;
           }
         }
         ${media.tab} {

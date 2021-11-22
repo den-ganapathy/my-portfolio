@@ -1,20 +1,31 @@
 import React from "react";
 import { ProtfolioProjectWrap } from "../styles/projectStyles";
-import project1 from "./../images/project1.png";
-import project2 from "./../images/project2.png";
+import projectQuiz from "./../images/projectQuiz.png";
+import project2 from "./../images/project1.png";
+import project3 from "./../images/project2.png";
+import project1 from "./../images/project3.png";
 
 const projectData = [
   {
     id: 1,
-    img: project1,
-    name: "Restaurent Menu",
+    img: projectQuiz,
+    name: "Quizilicious - Quiz app",
     url: "https://restaurant-menu-mern.herokuapp.com/",
+    gitlink: "",
   },
   {
     id: 2,
+    img: project1,
+    name: "Login With Authentication",
+    url: "https://restaurant-menu-mern.herokuapp.com/",
+    gitlink: "",
+  },
+  {
+    id: 3,
     img: project2,
-    name: "Portfolio",
-    url: "https://portfolio-den.herokuapp.com/",
+    name: "Restaurent Menu",
+    url: "https://restaurant-menu-mern.herokuapp.com/",
+    gitlink: "",
   },
 ];
 const Project = () => {
@@ -34,7 +45,16 @@ const Project = () => {
                 <img src={img} alt=""></img>
                 <p>
                   <span>{name}</span>
-                  <button onClick={() => gotoLink(url)}> View</button>
+                  <div className="buttons">
+                    <button className="button1" onClick={() => gotoLink(url)}>
+                      {" "}
+                      Open Project
+                    </button>
+                    <button className="button2" onClick={() => gotoLink(url)}>
+                      {" "}
+                      View Source code
+                    </button>
+                  </div>
                 </p>
               </div>
             );
